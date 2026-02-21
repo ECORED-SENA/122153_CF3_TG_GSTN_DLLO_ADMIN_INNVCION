@@ -1,17 +1,26 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.svg'),
+    componenteFormativo: 'Los sistemas y los paquetes ofimáticos',
+    descripcionCurso:
+      'Cobra gran importancia hoy en día la estrecha relación que debe existir entre los sistemas de información organizacionales y sobre todo cómo se entrega, se recibe, desde el emisor hasta el receptor, y la respuesta final, cerrando el ciclo comunicacional. Los paquetes ofimáticos hacen relevancia en la medida en que agilizan, mejoran y analizan la información para que fluya asertivamente en la organización.',
+    imagenBannerPrincipal: require('@/assets/curso/portada/banner-princiapal.svg'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
     imagenesDecorativasBanner: [
       {
-        clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
+        clases: ['banner-principal-decorativo-4', 'd-none', 'd-lg-block'],
+        imagen: require('@/assets/curso/portada/banner-principal-decorativo-1p.svg'),
+      },
+      {
+        clases: ['banner-principal-decorativo-3', 'd-none', 'd-lg-block'],
         imagen: require('@/assets/curso/portada/banner-principal-decorativo-1.svg'),
       },
       {
-        clases: ['banner-principal-decorativo-2'],
+        clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
         imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.svg'),
+      },
+      {
+        clases: ['banner-principal-decorativo-2', 'd-none', 'd-lg-block'],
+        imagen: require('@/assets/curso/portada/banner-principal-decorativo-3.svg'),
       },
     ],
   },
@@ -31,27 +40,37 @@ export default {
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Tema 1',
+        titulo: 'Teoría general de sistemas y sistemas de información',
         desarrolloContenidos: true,
-        subMenu: [
-          {
-            numero: '1.1',
-            titulo: 'Subtema 1',
-            hash: 't_1_1',
-          },
-        ],
       },
-
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Ofimática',
         desarrolloContenidos: true,
       },
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Tema 3',
+        titulo: 'Hojas de cálculo, procesadores de texto y presentaciones',
+        desarrolloContenidos: true,
+      },
+      {
+        nombreRuta: 'tema4',
+        numero: '4',
+        titulo: 'Navegación en la web',
+        desarrolloContenidos: true,
+      },
+      {
+        nombreRuta: 'tema5',
+        numero: '5',
+        titulo: 'Redes de información',
+        desarrolloContenidos: true,
+      },
+      {
+        nombreRuta: 'tema6',
+        numero: '6',
+        titulo: 'Normas técnicas de seguridad y salud en el ambiente laboral',
         desarrolloContenidos: true,
       },
     ],
@@ -86,7 +105,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/dist.pdf',
+        download: 'downloads/122153_CF3_DU.pdf',
       },
       {
         icono: 'fas fa-download',
@@ -102,90 +121,187 @@ export default {
   },
   complementario: [
     {
-      tema: '',
-      referencia: '',
-      tipo: 'Sitio web',
-      link: '',
+      tema: 'Teoría general de sistemas y sistemas de información',
+      referencia:
+        'Curso Laboral. (2021). <i>Información Crítica Técnico en seguridad informática análisis de riesgo 5 </i>(video). YouTube.',
+      tipo: 'Video',
+      link: 'https://youtu.be/Dyg3yrmCfAI',
+    },
+    {
+      tema: 'Normas técnicas de seguridad y salud en el ambiente laboral',
+      referencia:
+        'Gestión & Formación. (2016).<i> ¿Qué significa SGSST?</i> (video). YouTube.',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=y1Kxw3-jPL0',
+    },
+    {
+      tema: 'Normas técnicas de seguridad y salud en el ambiente laboral',
+      referencia:
+        'Gestión & Formación. (2019). <i>¿Cómo hacer los Objetivos del Sistema?</i> (video). YouTube.',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=QHg-z31nKG0',
+    },
+    {
+      tema: 'Normas técnicas de seguridad y salud en el ambiente laboral',
+      referencia:
+        'Gestión & Formación. (2020). <i>Comunicación del Sistema de Gestión</i> (video). YouTube.',
+      tipo: 'Video',
+      link: 'https://www.youtube.com/watch?v=wmazHuPJfTs',
     },
   ],
   glosario: [
     {
-      termino: 'Término',
-      significado: 'Definición',
+      termino: '<em>Hardware</em>',
+      significado:
+        'todo lo físico y tangible de un ordenador o sistema informático.',
+    },
+    {
+      termino: 'Ofimática',
+      significado:
+        'todas las técnicas, herramientas, equipos y aplicaciones tecnológicas utilizadas en los trabajos de oficina y afines, agilizando los procesos administrativos.',
+    },
+    {
+      termino: 'Organización',
+      significado:
+        'grupo de personas y medios organizados con un fin determinado.',
+    },
+    {
+      termino: 'Proceso',
+      significado:
+        'proceso es el paso a paso lógico que se debe llevar para llegar a algún logro con un resultado específico.',
+    },
+    {
+      termino: 'Red social',
+      significado:
+        'nueva organización donde por intereses y gustos comunes, personas, organizaciones o ambas se conectan de forma remota, compartiendo precisamente estos intereses.',
+    },
+    {
+      termino: 'Sistema',
+      significado:
+        'es concebido básicamente como un conjunto ordenado de normas y procedimientos que regulan el funcionamiento de un grupo o colectividad y que tienen relación entre sí.',
+    },
+    {
+      termino: '<em>Software</em>',
+      significado:
+        'es el conjunto de aplicaciones, programas de cómputo, procedimientos, datos y pautas, permitiendo realizar diferentes tareas dentro de un espacio, sistema o interfaz informática.',
+    },
+    {
+      termino: 'Seguridad de la información',
+      significado:
+        'se refiere a la confidencialidad, la integridad y la disponibilidad de la información y los datos importantes para la organización, independientemente del formato que tengan.',
+    },
+    {
+      termino: 'Sistema de información',
+      significado:
+        'Se refiere a las herramientas, métodos y procedimientos, que dan orden, control y ajustes, para ser procesados fácil y rápidamente.',
     },
   ],
   referencias: [
     {
-      referencia: '',
+      referencia: 'Concepto. (s.f.). Sistemas de información. Concepto.',
+      link: 'https://concepto.de/sistema-de-informacion/#ixzz7cG3vNX2L',
+    },
+    {
+      referencia:
+        'Ladrón de Guevara, M. Á. (2020). Procesadores de texto y presentaciones de información básicos. Editorial Tutor Formación.',
+      link: '',
+    },
+    {
+      referencia:
+        'Ley 1562 de 2012. Por la cual se modifica el sistema de riesgos laborales y se dictan otras disposiciones en materia de salud ocupacional. Julio 11 de 2012.',
+      link: '',
+    },
+    {
+      referencia:
+        'Sicilia, M., Palazón, M., López, I. & López, M (2021). <i>Marketing</i> en Redes Sociales. Esic Editorial.',
       link: '',
     },
   ],
-  creditos: [
-    {
-      titulo: 'ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable del ecosistema',
-          centro: 'Dirección General',
-        },
-        {
-          nombre: 'Nombre completo',
-          cargo: 'Responsable de línea de producción',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'CONTENIDO INSTRUCCIONAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Nombre del rol',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'DISEÑO Y DESARROLLO DE RECURSOS EDUCATIVOS DIGITALES',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Diseñador de contenidos',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Desarrollador <i>full stack</i>',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Animador y productor audiovisual',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-    {
-      titulo: 'VALIDACIÓN RECURSO EDUCATIVO DIGITAL',
-      autores: [
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Validador y vinculador de recursos educativos digitales',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-        {
-          nombre: 'Nombre responsable',
-          cargo: 'Evaluador de contenidos inclusivos y accesibles',
-          centro: 'Centro XYZ - Regional XYZ',
-        },
-      ],
-    },
-  ],
-  creditosAdicionales: {
-    imagenes:
-      'Fotografías y vectores tomados de <a href="https://www.freepik.es/" target="_blank">www.freepik.es</a>, <a href="https://www.shutterstock.com/" target="_blank">www.shutterstock.com</a>, <a href="https://unsplash.com/" target="_blank">unsplash.com </a>y <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a>',
-    creativeCommons:
-      'Licencia creative commons CC BY-NC-SA<br><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">ver licencia</a>',
+  creditos: {
+    liderEquipo: [
+      {
+        nombre: 'Maria Camila Garcia Santamaria',
+        cargo: 'Líder del equipo',
+        centro: 'Dirección General',
+      },
+    ],
+    contenidoInstruccional: [
+      {
+        nombre: 'Rafael Neftalí Lizcano Reyes',
+        cargo: 'Asesor metodológico y pedagógico',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    desarrolloProducto: [
+      {
+        nombre: 'Francisco José Lizcano Reyes.',
+        cargo: 'Responsable del equipo',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Diseño web',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Producción audiovisual',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Desarrollo front-end',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Nombre',
+        cargo: 'Validación de diseño y contenido',
+        centro:
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+    ],
+    gestoresRepositorio: [
+      {
+        nombre: 'Álvaro Andrés Angarita Ramirez',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Daniel Felipe Varón Molina',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+      {
+        nombre: 'Milady Tatiana Villamil Castellanos',
+        cargo: 'Validación y vinculación en plataforma LMS',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
+      },
+    ],
   },
+  // creditosInicio: [
+  //   {
+  //     titulo: 'En alianza',
+  //     contenido: [
+  //       require('@/assets/template/logo-sena-naranja.svg'),
+  //       require('@/assets/template/mintic.jpg'),
+  //       require('@/assets/template/minsalud.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'En compañía',
+  //     contenido: [
+  //       require('@/assets/template/presidencia.jpg'),
+  //       require('@/assets/template/ecopetrol.jpg'),
+  //     ],
+  //   },
+  //   {
+  //     titulo: 'Una iniciativa',
+  //     contenido: [require('@/assets/template/santander.jpg')],
+  //   },
+  // ],
 }

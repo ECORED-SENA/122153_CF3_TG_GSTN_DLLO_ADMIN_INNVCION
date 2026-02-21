@@ -3,30 +3,245 @@
     animation: float1 3.5s ease-in-out infinite alternate
     position: absolute
     top: 20%
-    right: 10%
+    right: 4%
+    z-index: 2
   &-2
+    animation: float1 1.8s ease-in-out infinite alternate
+    position: absolute
+    top: 53%
+    right: 4%
+    z-index: 2
+  &-3
     animation: float1 2.8s ease-in-out infinite alternate
     position: absolute
-    top: 51%
-    right: 30%
+    top: 15%
+    left: 5%
+    z-index: 2
+  &-4
+    animation: spinner 15s infinite linear
+    position: absolute
+    top: 6%
+    right: 5%
+
+.img-a 
+  display: block
+  margin: auto
+  width: auto
+  height: auto
+
+.img-t
+  width: auto
+
+.banner-principal__img
+  width: 400px !important      
+.banner-principal__img
+    img
+      z-index: 1
+      position: relative
 
 @keyframes float1
   0%
     transform: translateY(20px)
+
   100%
     transform: translateY(0px)
+
+@keyframes spinner
+  0% 
+      transform: rotate(0deg)
+  100% 
+      transform: rotate(1turn)
+
+// Nuevos estilos
+
+.titulo-segundo:after
+    border-left-color: #3d46c2
+    background-color: #e8e8e8
+
+.carrusel_card_bg
+    background: #FAFCE1
+
+.color_cajon_tema1
+    background: #dce7361a
+    
+.color_cajon_tema1::before
+   background: $color-secundario
+
+.color_cajon_tema1_2
+    background: #f8521621
+    
+.color_cajon_tema1_2::before,.color_cajon_green_cuadro
+   background: #F85316
+
+.color_cajon_green
+    background: #75b62f27
+    
+.color_cajon_green::before
+   background: #B1E874
+
+.tarjeta--green
+  background-color: #FAFCE1
+  .slyder-a__btn--sigt,.slyder-a__btn--atrs
+    background-color: $color-secundario
+      
+.color_tarjeta__secundaria
+    background: #FCFDEA
+    .acordion__accion__btn--a
+     background-color: $color-secundario
+
+.color_texto_acento
+  color: $color-acento-contenido
+
+.color_check_t3
+  color: $color-acento-botones
+
+.color-icon-check
+  color: $color-acento-botones
+
+.altura_decard
+  height: 453px
+
+.altura_card_t_1
+  height: 580px
+
+.altura_slider_t_3
+  height: 380px
+
+.altura_slider_t_5
+  height: 480px
+
+.bloque-texto-g__img
+  width: 40% !important
   
-.banner-principal .tarjeta
-  background-position: left 50% !important
+.bloque-texto-g__texto
+  width: 70% !important
 
-.banner-principal__row .banner-principal__img
-  width: 400px !important  
+.altura_cajon_tema_3_1
+  height: 350px
 
-.titulo-principal.color-acento-contenido .titulo-principal__numero span
-  color: white !important
+.color_cajon_grey_cuadro
+  background: #F6F6F6
 
-.banner-interno__titulo__icono i
-  color: $color-primario
+.color--green
+  background: #EBF5E0
 
-figcaption
-  font-weight: normal
+.color--green2
+  background: #D5E9C0
+
+.punto_caliente_acento_botones
+  .img-infografica__item__numero
+    color: $color-boton-texto !important
+
+.color-acento-botones_black
+  background: #000000e6
+  h5,p
+   color: #fff !important
+
+.color_cajon_tema_3_1
+  background-color: #FDD4C4
+  &::before
+    background: #F85316
+
+.color_cajon_tema_3_2
+  background-color: #F6F9CC
+  &::before
+    background: #B1E874
+
+
+.tarjeta_lineatiempot4
+  background: #FCFDEA
+  .linea-tiempo-c__header__btn
+    background: #DCE736
+    i 
+      color: $color-acento-contenido
+
+.t-2-nivel1-tarjeta
+  height: 4em
+.t-2-nivel2-tarjeta
+  height: 10em
+  border-radius: 20px
+.t-2-nivel3-tarjeta
+  margin-top: -3em
+
+.t-3-nivel1-tarjeta
+  height: 4em
+.t-3-nivel2-tarjeta
+  height: 22em
+  border-radius: 20px
+.t-3-nivel3-tarjeta
+  margin-top: -3em
+.tarjeta-color-st5
+  background-color: #F1F5AE
+
+.bloque-texto-f__autor-right
+  text-align: right
+
+.cac
+  color: $color-acento-contenido !important
+
+///////// Card hover --------------------------------------
+.crd_hover_txt
+  position: relative  
+  padding: 0 !important
+  overflow: hidden !important  
+  &:hover    
+    .crd_hover_txt--body   
+      transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 
+      transform: translateY(0)
+
+  .crd_hover_txt--body
+    position: absolute
+    padding: 1.5rem
+    bottom: 0    
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1)
+    transform: translateY(calc( 100% - 3.85rem ))
+    background-color: $color-secundario 
+  
+  @media (min-width:1200px) and (max-width:1400px)  
+    .crd_hover_txt--body
+      p
+        font-size: 0.85em  
+
+// tarjetas 
+
+.crd--avatarHorizontal
+  position: relative
+  padding-right: 1rem
+  height: 190px
+  & > *
+    position: relative
+  h5 
+    color: #black
+  p 
+    margin-bottom: 0
+  &::before  
+    position: absolute 
+    content: ''
+    top: 0
+    right: 0
+    width: calc( 100% - 60px)
+    background-color: #F1F5AD
+    height: 100%
+
+  @media (max-width: 1000px)
+    padding-right: 2rem
+    height: 100%
+
+
+.crd--complete
+  &::before
+    border-radius: 30px
+
+
+    // Cambio color texto banner principal
+
+.banner-principal__info
+  h1,p
+   color: #12263F
+
+.bgb
+  background-color: #F3F9FF
+  border-radius: 20px   
+
+.tabs-c__tab--active  
+  font-weight: bold
